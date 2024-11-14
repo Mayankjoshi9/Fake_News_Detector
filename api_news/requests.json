@@ -1,0 +1,71 @@
+{
+    "status": "ok",
+    "totalResults": 15,
+    "articles": [
+        {
+            "source": {
+                "id": "abc-news",
+                "name": "ABC News"
+            },
+            "author": "BHARATHA MALLAWARACHI Associated Press",
+            "title": "Sri Lankan president seeks party win in parliamentary election to help him push his economic reforms",
+            "description": "Sri Lankan President Anura Kumara Dissanayake is looking to consolidate his party\u2019s power in Thursday\u2019s parliamentary election to help him implement his election pledges to solve the country\u2019s economic woes and foster good governance",
+            "url": "https://abcnews.go.com/Business/wireStory/sri-lankan-president-seeks-party-win-parliamentary-election-115802037",
+            "urlToImage": "https://i.abcnewsfe.com/a/873b8050-c21c-4af4-99f6-342116935ae1/wirestory_7fd0ab2d3ed89ccac2e8cd0fdc6731bf_16x9.jpg?w=1600",
+            "publishedAt": "2024-11-13T05:02:17Z",
+            "content": "COLOMBO, Sri Lanka -- Sri Lankan President Anura Kumara Dissanayake is looking to consolidate his party's power in Thursday's parliamentary election to help him implement his election pledges to solv\u2026 [+4800 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "The Star Online"
+            },
+            "author": "Uditha Jayasinghe",
+            "title": "Discarding decades of dynastic politics, Sri Lankans to vote for change in parliament poll",
+            "description": "HAMBANTOTA, Sri Lanka (Reuters) - Sri Lanka votes to elect a new parliament this week in a snap general election called by its Marxist-leaning president who wants a fresh mandate in the legislature to drive economic reforms in the debt-ridden island nation. R\u2026",
+            "url": "https://www.thestar.com.my/news/world/2024/11/12/discarding-decades-of-dynastic-politics-sri-lankans-to-vote-for-change-in-parliament-poll",
+            "urlToImage": "https://apicms.thestar.com.my/uploads/images/2024/11/12/3012544.jpg",
+            "publishedAt": "2024-11-12T05:42:00Z",
+            "content": "HAMBANTOTA, Sri Lanka (Reuters) - Sri Lanka votes to elect a new parliament this week in a snap general election called by its Marxist-leaning president who wants a fresh mandate in the legislature t\u2026 [+4112 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Investing.com"
+            },
+            "author": "Reuters",
+            "title": "Discarding decades of dynastic politics, Sri Lankans to vote for change in parliament poll",
+            "description": "Discarding decades of dynastic politics, Sri Lankans to vote for change in parliament poll",
+            "url": "https://www.investing.com/news/economy-news/discarding-decades-of-dynastic-politics-sri-lankans-to-vote-for-change-in-parliament-poll-3715413",
+            "urlToImage": "https://i-invdn-com.investing.com/news/indicatornews_2_800x533_L_1412601599.jpg",
+            "publishedAt": "2024-11-12T05:36:35Z",
+            "content": "By Uditha Jayasinghe\r\nHAMBANTOTA, Sri Lanka (Reuters) - Sri Lanka votes to elect a new parliament this week in a snap general election called by its Marxist-leaning president who wants a fresh mandat\u2026 [+4053 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "The Diplomat"
+            },
+            "author": "Sudha Ramachandran",
+            "title": "Nepali PM to Travel to China on First Bilateral Visit",
+            "description": "Prime Minister Oli is widely regarded as \u201cpro-China.\u201d His visit to Beijing will deepen that perception.",
+            "url": "https://thediplomat.com/2024/11/nepali-pm-to-travel-to-china-on-first-bilateral-visit/",
+            "urlToImage": "https://thediplomat.com/wp-content/uploads/2024/11/sizes/td-story-s-2/thediplomat_2024-11-11-074143.jpg",
+            "publishedAt": "2024-11-11T09:57:07Z",
+            "content": "Nepali Prime Minister Khadga Prasad Sharma Oli is scheduled to visit China on December 2-6.\r\nNew Delhi has traditionally been the first port of call for newly sworn-in Nepali prime ministers. However\u2026 [+14856 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Sinhalanet.net"
+            },
+            "author": "admin",
+            "title": "Arun Siddharth the troublemaker",
+            "description": "A feature article in The Island Financial Review of February 16, 2023 served as a formal event announcement for the inaugural function of a new NGO called the People\u2019s Convention on Good Governance (PCGG) that was scheduled to be held \u2026",
+            "url": "https://www.sinhalanet.net/arun-siddharth-the-troublemaker",
+            "urlToImage": "https://www.sinhalanet.net/wp-content/uploads/2015/07/logo.jpg",
+            "publishedAt": "2024-11-10T03:38:38Z",
+            "content": "A feature article in The Island Financial Review of February 16, 2023 served as a formal event announcement for the inaugural function of a new NGO called the Peoples Convention on Good Governance (P\u2026 [+8832 chars]"
+        }
+    ]
+}
