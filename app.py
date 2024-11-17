@@ -14,6 +14,7 @@ import spacy
 from sklearn.metrics.pairwise import cosine_similarity
 from dotenv import load_dotenv
 
+load_dotenv()
 try:
     stop_words = set(stopwords.words('english'))
 except LookupError:
@@ -80,7 +81,7 @@ def fetch_entity(text):
    for entity in doc.ents:
         essential_entities = [
     "PERSON",
-    "ORG",
+    "FAC",
     "GPE",
     "LOC",
     "NORP",
@@ -108,7 +109,10 @@ if "prediction_made" not in st.session_state:
 
 
 if st.button("Predict"):
+    
     entity_text=fetch_entity(title)
+    if entity_text=="":
+        entity_text="world"
     fetch_news(entity_text)
     highest_cosine=0
     with open("api_news/requests.json","r") as f:
@@ -121,8 +125,7 @@ if st.button("Predict"):
             cosine_sim = cosine_similarity([embeddings[0]], [embeddings[1]])
             if(cosine_sim[0][0]>highest_cosine):
                highest_cosine=cosine_sim[0][0]
-              
-    
+
 
 
     input_text = stemming(title + " " + text)
@@ -132,13 +135,13 @@ if st.button("Predict"):
     try:
         prediction = model.predict(input_text_tfidf)
         predict=""
-        if(prediction[0]==0 and highest_cosine>0.3):
+        if(prediction[0]==0 and highest_cosine>=0.3):
            predict="Verified News"    
-        elif(prediction[0]==0 and highest_cosine<0.1):
+        elif(prediction[0]==0 and highest_cosine<=0.1):
             predict="Questionable"
-        elif(prediction[0]==1 and highest_cosine>0.5):
+        elif(prediction[0]==1 and highest_cosine>=0.5):
             predict="Likely True"
-        elif(prediction[0]==1 and highest_cosine>0.2):
+        elif(prediction[0]==1 and highest_cosine>=0.2):
             predict="Potentially Misleading"
         else :
             predict="Fake News"
@@ -171,4 +174,3 @@ if st.session_state.prediction_made:
             else:
                 st.warning("This model does not support online learning; it cannot be updated with new data.")
 
-# PERSON NORP FAC ORG GPE LOC EVENT WORK_OF_ART LAW

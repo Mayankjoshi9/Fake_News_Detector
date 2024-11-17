@@ -1,71 +1,71 @@
 {
     "status": "ok",
-    "totalResults": 15,
+    "totalResults": 30,
     "articles": [
         {
             "source": {
-                "id": "abc-news",
-                "name": "ABC News"
+                "id": null,
+                "name": "The Punch"
             },
-            "author": "BHARATHA MALLAWARACHI Associated Press",
-            "title": "Sri Lankan president seeks party win in parliamentary election to help him push his economic reforms",
-            "description": "Sri Lankan President Anura Kumara Dissanayake is looking to consolidate his party\u2019s power in Thursday\u2019s parliamentary election to help him implement his election pledges to solve the country\u2019s economic woes and foster good governance",
-            "url": "https://abcnews.go.com/Business/wireStory/sri-lankan-president-seeks-party-win-parliamentary-election-115802037",
-            "urlToImage": "https://i.abcnewsfe.com/a/873b8050-c21c-4af4-99f6-342116935ae1/wirestory_7fd0ab2d3ed89ccac2e8cd0fdc6731bf_16x9.jpg?w=1600",
-            "publishedAt": "2024-11-13T05:02:17Z",
-            "content": "COLOMBO, Sri Lanka -- Sri Lankan President Anura Kumara Dissanayake is looking to consolidate his party's power in Thursday's parliamentary election to help him implement his election pledges to solv\u2026 [+4800 chars]"
+            "author": "Stephen Angbulu",
+            "title": "JUST IN: Tinubu to receive Indian PM Modi in Abuja Sunday",
+            "description": "President Bola Tinubu will on Sunday receive Indian Prime Minister, Narendra Modi, for a state visit at the Presidential Villa in Abuja. \u201cBoth leaders will exchange signed Memoranda of Understanding to enhance collaboration in critical sectors,\u201d Tinubu\u2019s Spec\u2026",
+            "url": "https://punchng.com/just-in-tinubu-to-receive-indian-pm-modi-in-abuja-sunday/",
+            "urlToImage": "https://cdn.punchng.com/wp-content/uploads/2024/10/03220007/Bola-.png",
+            "publishedAt": "2024-11-16T13:52:59Z",
+            "content": "President Bola Tinubu will on Sunday receive Indian Prime Minister, Narendra Modi, for a state visit at the Presidential Villa in Abuja.\r\nBoth leaders will exchange signed Memoranda of Understanding \u2026 [+526 chars]"
         },
         {
             "source": {
                 "id": null,
-                "name": "The Star Online"
+                "name": "Economictimes.com"
             },
-            "author": "Uditha Jayasinghe",
-            "title": "Discarding decades of dynastic politics, Sri Lankans to vote for change in parliament poll",
-            "description": "HAMBANTOTA, Sri Lanka (Reuters) - Sri Lanka votes to elect a new parliament this week in a snap general election called by its Marxist-leaning president who wants a fresh mandate in the legislature to drive economic reforms in the debt-ridden island nation. R\u2026",
-            "url": "https://www.thestar.com.my/news/world/2024/11/12/discarding-decades-of-dynastic-politics-sri-lankans-to-vote-for-change-in-parliament-poll",
-            "urlToImage": "https://apicms.thestar.com.my/uploads/images/2024/11/12/3012544.jpg",
-            "publishedAt": "2024-11-12T05:42:00Z",
-            "content": "HAMBANTOTA, Sri Lanka (Reuters) - Sri Lanka votes to elect a new parliament this week in a snap general election called by its Marxist-leaning president who wants a fresh mandate in the legislature t\u2026 [+4112 chars]"
+            "author": "AP",
+            "title": "Mike Tyson-Jake Paul undercard match: Who is winner Neeraj Goyat?",
+            "description": "Indian boxer Neeraj Goyat defeated Brazilian boxer Whindersson Nunes in a super-middleweight match on Friday. The six-round, non-title bout took place at AT&T Stadium in Arlington, Texas, as part of the Jake Paul vs. Mike Tyson event. Goyat won the fight with\u2026",
+            "url": "https://m.economictimes.com/news/sports/mike-tyson-jake-paul-undercard-match-who-is-winner-neeraj-goyat/neeraj-goyat-wins-unanimous-decision-against-whindersson-nunes/slideshow/115361548.cms",
+            "urlToImage": "https://img.etimg.com/thumb/msid-115361548,width-1070,height-580,overlay-economictimes/slideshow.jpg",
+            "publishedAt": "2024-11-16T11:52:51Z",
+            "content": "PM Modi embarked on a five-day visit to Nigeria, Brazil and Guyana"
         },
         {
             "source": {
                 "id": null,
-                "name": "Investing.com"
+                "name": "Economictimes.com"
             },
             "author": "Reuters",
-            "title": "Discarding decades of dynastic politics, Sri Lankans to vote for change in parliament poll",
-            "description": "Discarding decades of dynastic politics, Sri Lankans to vote for change in parliament poll",
-            "url": "https://www.investing.com/news/economy-news/discarding-decades-of-dynastic-politics-sri-lankans-to-vote-for-change-in-parliament-poll-3715413",
-            "urlToImage": "https://i-invdn-com.investing.com/news/indicatornews_2_800x533_L_1412601599.jpg",
-            "publishedAt": "2024-11-12T05:36:35Z",
-            "content": "By Uditha Jayasinghe\r\nHAMBANTOTA, Sri Lanka (Reuters) - Sri Lanka votes to elect a new parliament this week in a snap general election called by its Marxist-leaning president who wants a fresh mandat\u2026 [+4053 chars]"
+            "title": "Jake Paul vs Mike Tyson: Top moments, everything you need to know about the fight",
+            "description": "Mike Tyson, the 58-year-old former heavyweight boxing champion, lost his comeback fight to 27-year-old YouTuber-turned-boxer Jake Paul. This was Tyson's first professional fight since 2005. In a surprising turn of events, Paul triumphed with a unanimous decis\u2026",
+            "url": "https://m.economictimes.com/news/sports/jake-paul-vs-mike-tyson-top-moments-everything-you-need-to-know-about-the-fight/mike-tyson-loses-to-jake-paul-in-first-fight-in-19-years/slideshow/115361012.cms",
+            "urlToImage": "https://img.etimg.com/thumb/msid-115361012,width-1070,height-580,overlay-economictimes/slideshow.jpg",
+            "publishedAt": "2024-11-16T11:27:54Z",
+            "content": "PM Modi embarked on a five-day visit to Nigeria, Brazil and Guyana"
         },
         {
             "source": {
                 "id": null,
-                "name": "The Diplomat"
+                "name": "BusinessLine"
             },
-            "author": "Sudha Ramachandran",
-            "title": "Nepali PM to Travel to China on First Bilateral Visit",
-            "description": "Prime Minister Oli is widely regarded as \u201cpro-China.\u201d His visit to Beijing will deepen that perception.",
-            "url": "https://thediplomat.com/2024/11/nepali-pm-to-travel-to-china-on-first-bilateral-visit/",
-            "urlToImage": "https://thediplomat.com/wp-content/uploads/2024/11/sizes/td-story-s-2/thediplomat_2024-11-11-074143.jpg",
-            "publishedAt": "2024-11-11T09:57:07Z",
-            "content": "Nepali Prime Minister Khadga Prasad Sharma Oli is scheduled to visit China on December 2-6.\r\nNew Delhi has traditionally been the first port of call for newly sworn-in Nepali prime ministers. However\u2026 [+14856 chars]"
+            "author": "PTI",
+            "title": "Looking forward to meaningful discussions at G20: PM Modi",
+            "description": "Modi, Chinese President Xi Jinping and US President Joe Biden will be among the leaders to attend the summit in Rio de Janeiro on November 18 and 19",
+            "url": "https://www.thehindubusinessline.com/news/looking-forward-to-meaningful-discussions-at-g20-pm-modi/article68875462.ece",
+            "urlToImage": "https://bl-i.thgim.com/public/incoming/bwovk3/article68875464.ece/alternates/LANDSCAPE_1200/20241116124L.jpg",
+            "publishedAt": "2024-11-16T10:04:38Z",
+            "content": "Prime Minister Narendra Modi on Saturday said he is looking forward to \"meaningful\" discussions at the upcoming G20 summit in Brazil that laid out the broad agenda for the grouping building upon the \u2026 [+3395 chars]"
         },
         {
             "source": {
-                "id": null,
-                "name": "Sinhalanet.net"
+                "id": "the-times-of-india",
+                "name": "The Times of India"
             },
-            "author": "admin",
-            "title": "Arun Siddharth the troublemaker",
-            "description": "A feature article in The Island Financial Review of February 16, 2023 served as a formal event announcement for the inaugural function of a new NGO called the People\u2019s Convention on Good Governance (PCGG) that was scheduled to be held \u2026",
-            "url": "https://www.sinhalanet.net/arun-siddharth-the-troublemaker",
-            "urlToImage": "https://www.sinhalanet.net/wp-content/uploads/2015/07/logo.jpg",
-            "publishedAt": "2024-11-10T03:38:38Z",
-            "content": "A feature article in The Island Financial Review of February 16, 2023 served as a formal event announcement for the inaugural function of a new NGO called the Peoples Convention on Good Governance (P\u2026 [+8832 chars]"
+            "author": "ANI",
+            "title": "PM Narendra Modi departs for 5-day tour of Nigeria, Brazil, Guyana",
+            "description": "Indian Prime Minister Narendra Modi has embarked on a five-day trip to Nigeria, Brazil, and Guyana. His itinerary includes strengthening strategic partnerships, attending the G20 Summit, and engaging with the Indian diaspora. This marks the first visit of an \u2026",
+            "url": "https://economictimes.indiatimes.com/news/india/pm-narendra-modi-departs-for-5-day-tour-of-nigeria-brazil-guyana/articleshow/115357135.cms",
+            "urlToImage": "https://img.etimg.com/thumb/msid-115357149,width-1200,height-630,imgsize-26280,overlay-economictimes/articleshow.jpg",
+            "publishedAt": "2024-11-16T08:41:38Z",
+            "content": "Prime Minister Narendra Modi on Saturday left for his five-day visit to Nigeria, Brazil, and Guyana. He will be on his three-nation tour from November 16 to 21, where he will be attending the G20 Sum\u2026 [+3254 chars]"
         }
     ]
 }
