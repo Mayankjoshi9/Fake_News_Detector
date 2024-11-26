@@ -145,8 +145,17 @@ if st.button("Predict"):
             predict="Potentially Misleading"
         else :
             predict="Fake News"
-        
-        st.write("Prediction:", f"{predict}")
+        if(predict=="Likely True" or predict=="Verified News"):
+            st.markdown(f"### **✅ Prediction : {predict}**")
+        elif (predict=="Questionable"):
+            st.markdown(f"### **❓ Prediction : {predict}**")
+        else:
+            st.markdown(f"### **❌ Prediction : {predict}**")
+            
+
+
+
+
         st.session_state.prediction_made = True  
     except Exception as e:
         st.error(f"Error in prediction: {e}")
@@ -173,4 +182,3 @@ if st.session_state.prediction_made:
                     st.error(f"Error updating model: {e}")
             else:
                 st.warning("This model does not support online learning; it cannot be updated with new data.")
-
