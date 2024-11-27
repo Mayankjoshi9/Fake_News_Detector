@@ -119,7 +119,9 @@ if st.button("Predict"):
         t=json.load(f)
         articles=t["articles"]
         for article in articles:
-            article1=article["title"]+article["description"]
+            title1 = article["title"] if "title" in article else "No Title"
+            description1 = article["description"] if "description" in article else "No Description"
+            article1 = title1 + description1
             article2=title+text
             embeddings = model1.encode([article1, article2])
             cosine_sim = cosine_similarity([embeddings[0]], [embeddings[1]])
