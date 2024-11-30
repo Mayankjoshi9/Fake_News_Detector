@@ -116,11 +116,11 @@ if st.button("Predict"):
     fetch_news(entity_text)
     highest_cosine=0
     with open("api_news/requests.json","r") as f:
-        t=json.load(f)
-        articles=t["articles"]
+        files=json.load(f)
+        articles=files["articles"]
         for article in articles:
-            title1 = article["title"] if "title" in article else "No Title"
-            description1 = article["description"] if "description" in article else "No Description"
+            title1 = article["title"] if article["title"] else ""
+            description1 = article["description"] if article["description"] else ""
             article1 = title1 + description1
             article2=title+text
             embeddings = model1.encode([article1, article2])
