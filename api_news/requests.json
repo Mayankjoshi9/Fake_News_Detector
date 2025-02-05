@@ -1,71 +1,71 @@
 {
     "status": "ok",
-    "totalResults": 30,
+    "totalResults": 724,
     "articles": [
         {
             "source": {
                 "id": null,
-                "name": "The Punch"
+                "name": "Hurriyet Daily News"
             },
-            "author": "Stephen Angbulu",
-            "title": "JUST IN: Tinubu to receive Indian PM Modi in Abuja Sunday",
-            "description": "President Bola Tinubu will on Sunday receive Indian Prime Minister, Narendra Modi, for a state visit at the Presidential Villa in Abuja. \u201cBoth leaders will exchange signed Memoranda of Understanding to enhance collaboration in critical sectors,\u201d Tinubu\u2019s Spec\u2026",
-            "url": "https://punchng.com/just-in-tinubu-to-receive-indian-pm-modi-in-abuja-sunday/",
-            "urlToImage": "https://cdn.punchng.com/wp-content/uploads/2024/10/03220007/Bola-.png",
-            "publishedAt": "2024-11-16T13:52:59Z",
-            "content": "President Bola Tinubu will on Sunday receive Indian Prime Minister, Narendra Modi, for a state visit at the Presidential Villa in Abuja.\r\nBoth leaders will exchange signed Memoranda of Understanding \u2026 [+526 chars]"
+            "author": "hurriyetdailynews.com",
+            "title": "T\u00fcrkiye rejects Trump\u2019s bid to expel Palestinians from Gaza",
+            "description": "T\u00fcrkiye has reiterated its objection to U.S. President Donald Trump\u2019s proposal to expel Palestinians from their lands to Egypt and Jordan, as Foreign Minister Hakan Fidan described the American leader's approach as \"failing to read history properly.\"",
+            "url": "https://www.hurriyetdailynews.com/turkiye-rejects-trumps-bid-to-expel-palestinians-from-gaza-205431",
+            "urlToImage": "https://image.hurimg.com/i/hurriyet/75/200x200/67a21336c60e420cca11d7ab.jpg",
+            "publishedAt": "2025-02-04T13:16:55Z",
+            "content": "ANKARA\r\nT\u00fcrkiye has reiterated its objection to U.S. President Donald Trumps proposal to expel Palestinians from their lands to Egypt and Jordan, as Foreign Minister Hakan Fidan described the America\u2026 [+2750 chars]"
+        },
+        {
+            "source": {
+                "id": "the-jerusalem-post",
+                "name": "The Jerusalem Post"
+            },
+            "author": "BY ARSHAD MEHMOOD/THE MEDIA LINE",
+            "title": "Pakistan denies involvement as Hamas negotiates hosting of Palestinian prisoners",
+            "description": "These reports come as negotiations for the agreement\u2019s second phase are set to begin on Tuesday and after Trump suggested that Arab nations should take in large numbers of Palestinian refugees.",
+            "url": "https://www.jpost.com/middle-east/article-840617",
+            "urlToImage": "https://images.jpost.com/image/upload/f_auto,fl_lossy/c_fill,g_faces:center,h_407,w_690/647149",
+            "publishedAt": "2025-02-04T12:49:31Z",
+            "content": "[Islamabad] - Hamas said on Monday that Pakistan has agreed to host 15 Palestinian prisoners who were released from Israeli custody under a recent ceasefire agreement. However, Pakistan\u2019s Interior Mi\u2026 [+2998 chars]"
         },
         {
             "source": {
                 "id": null,
-                "name": "Economictimes.com"
+                "name": "Boston Herald"
             },
-            "author": "AP",
-            "title": "Mike Tyson-Jake Paul undercard match: Who is winner Neeraj Goyat?",
-            "description": "Indian boxer Neeraj Goyat defeated Brazilian boxer Whindersson Nunes in a super-middleweight match on Friday. The six-round, non-title bout took place at AT&T Stadium in Arlington, Texas, as part of the Jake Paul vs. Mike Tyson event. Goyat won the fight with\u2026",
-            "url": "https://m.economictimes.com/news/sports/mike-tyson-jake-paul-undercard-match-who-is-winner-neeraj-goyat/neeraj-goyat-wins-unanimous-decision-against-whindersson-nunes/slideshow/115361548.cms",
-            "urlToImage": "https://img.etimg.com/thumb/msid-115361548,width-1070,height-580,overlay-economictimes/slideshow.jpg",
-            "publishedAt": "2024-11-16T11:52:51Z",
-            "content": "PM Modi embarked on a five-day visit to Nigeria, Brazil and Guyana"
+            "author": "Associated Press",
+            "title": "Trump and Netanyahu hold talks as US president warns \u2018no guarantees\u2019 fragile peace in Gaza will hold",
+            "description": "Trump is guarded about the long-term prospects for the truce between Israel and Hamas",
+            "url": "https://www.bostonherald.com/2025/02/04/trump-netanyahu-hold-talks/",
+            "urlToImage": "https://www.bostonherald.com/wp-content/uploads/2025/02/Trump_Netanyahu_41416.jpg?w=1024&h=682",
+            "publishedAt": "2025-02-04T12:42:25Z",
+            "content": "By AAMER MADHANI and TIA GOLDENBERG, Associated Press\r\nWASHINGTON (AP) \u2014 President Donald Trump and Benjamin Netanyahu are set to meet Tuesday as the Israeli prime minister faces competing pressure f\u2026 [+6862 chars]"
         },
         {
             "source": {
                 "id": null,
-                "name": "Economictimes.com"
+                "name": "Washington Monthly"
             },
-            "author": "Reuters",
-            "title": "Jake Paul vs Mike Tyson: Top moments, everything you need to know about the fight",
-            "description": "Mike Tyson, the 58-year-old former heavyweight boxing champion, lost his comeback fight to 27-year-old YouTuber-turned-boxer Jake Paul. This was Tyson's first professional fight since 2005. In a surprising turn of events, Paul triumphed with a unanimous decis\u2026",
-            "url": "https://m.economictimes.com/news/sports/jake-paul-vs-mike-tyson-top-moments-everything-you-need-to-know-about-the-fight/mike-tyson-loses-to-jake-paul-in-first-fight-in-19-years/slideshow/115361012.cms",
-            "urlToImage": "https://img.etimg.com/thumb/msid-115361012,width-1070,height-580,overlay-economictimes/slideshow.jpg",
-            "publishedAt": "2024-11-16T11:27:54Z",
-            "content": "PM Modi embarked on a five-day visit to Nigeria, Brazil and Guyana"
+            "author": "Margaret Carlson",
+            "title": "In Trump\u2019s Washington, the Nomination \u201cSherpas\u201d Do the Heavy Lifting. Just ask Kennedy, Gabbard, and Hegseth",
+            "description": "They usually have the reputation and bipartisan cred that the nominees lack\nThe post In Trump\u2019s Washington, the Nomination \u201cSherpas\u201d Do the Heavy Lifting. Just ask Kennedy, Gabbard, and Hegseth appeared first on Washington Monthly.",
+            "url": "http://washingtonmonthly.com/2025/02/04/in-trumps-washington-the-nomination-sherpas-do-the-heavy-lifting-just-ask-kennedy-gabbard-and-hegseth/",
+            "urlToImage": "https://washingtonmonthly.com/wp-content/uploads/2025/02/AP25030735204553-scaled.jpg",
+            "publishedAt": "2025-02-04T12:24:08Z",
+            "content": "When Senator Lindsay Graham, a critic of Tulsi Gabbard, who is tied with Robert F. Kennedy Jr. for the most endangered nominee, learned that former North Carolina Senator Richard Burr would be shephe\u2026 [+8056 chars]"
         },
         {
             "source": {
                 "id": null,
-                "name": "BusinessLine"
+                "name": "Nakedcapitalism.com"
             },
-            "author": "PTI",
-            "title": "Looking forward to meaningful discussions at G20: PM Modi",
-            "description": "Modi, Chinese President Xi Jinping and US President Joe Biden will be among the leaders to attend the summit in Rio de Janeiro on November 18 and 19",
-            "url": "https://www.thehindubusinessline.com/news/looking-forward-to-meaningful-discussions-at-g20-pm-modi/article68875462.ece",
-            "urlToImage": "https://bl-i.thgim.com/public/incoming/bwovk3/article68875464.ece/alternates/LANDSCAPE_1200/20241116124L.jpg",
-            "publishedAt": "2024-11-16T10:04:38Z",
-            "content": "Prime Minister Narendra Modi on Saturday said he is looking forward to \"meaningful\" discussions at the upcoming G20 summit in Brazil that laid out the broad agenda for the grouping building upon the \u2026 [+3395 chars]"
-        },
-        {
-            "source": {
-                "id": "the-times-of-india",
-                "name": "The Times of India"
-            },
-            "author": "ANI",
-            "title": "PM Narendra Modi departs for 5-day tour of Nigeria, Brazil, Guyana",
-            "description": "Indian Prime Minister Narendra Modi has embarked on a five-day trip to Nigeria, Brazil, and Guyana. His itinerary includes strengthening strategic partnerships, attending the G20 Summit, and engaging with the Indian diaspora. This marks the first visit of an \u2026",
-            "url": "https://economictimes.indiatimes.com/news/india/pm-narendra-modi-departs-for-5-day-tour-of-nigeria-brazil-guyana/articleshow/115357135.cms",
-            "urlToImage": "https://img.etimg.com/thumb/msid-115357149,width-1200,height-630,imgsize-26280,overlay-economictimes/articleshow.jpg",
-            "publishedAt": "2024-11-16T08:41:38Z",
-            "content": "Prime Minister Narendra Modi on Saturday left for his five-day visit to Nigeria, Brazil, and Guyana. He will be on his three-nation tour from November 16 to 21, where he will be attending the G20 Sum\u2026 [+3254 chars]"
+            "author": "Yves Smith",
+            "title": "Links 2/4/2025",
+            "description": "Our fainting daily links: black star food-making, deadly Alzheimers meds, EU: climate change 'uninsurable, China tariff retaliation, Jo'burg econ weakness, France oligarch purge? Reform leads in UK, moar Israel ceasfire cheating, Trump Ukraine minerals for we\u2026",
+            "url": "https://www.nakedcapitalism.com/2025/02/links-2-4-2025.html",
+            "urlToImage": "https://www.nakedcapitalism.com/wp-content/uploads/2025/02/Screen-Shot-2025-02-04-at-4.07.21-PM.png",
+            "publishedAt": "2025-02-04T11:55:06Z",
+            "content": "Black holes seen \u2018cooking\u2019 their own food in fascinating discovery Earth\r\nThe #1 cause of maternal death in the US: suicide/homicide ZMEScience (Dr. Kevin)\r\nGuillain-Barre syndrome: India faces outbr\u2026 [+8553 chars]"
         }
     ]
 }

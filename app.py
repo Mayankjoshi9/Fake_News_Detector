@@ -43,7 +43,7 @@ except FileNotFoundError:
     st.error("Model or vectorizer file not found. Please check your file paths.")
 
 
-st.title("Fake News Predictor")
+st.title("News Predictor")
 st.subheader("Enter News Title and Text")
 
 
@@ -59,10 +59,12 @@ def stemming(content):
 
 def fetch_news(query):
     """Fetch news articles based on a query"""
+    today=datetime.today()
     one_month = datetime.today() - relativedelta(months=1)
-    date_str = one_month.strftime('%Y-%m-%d')
+    one_month_str = one_month.strftime('%Y-%m-%d')
+    today_str=today.strftime('%Y-%m-%d')
     api_key = os.getenv("NEWS_API_KEY")  # Replace with a safer environment variable in practice
-    url = f"https://newsapi.org/v2/everything?q={query}&language=en&from={date_str}&sortBy=publishedAt&pageSize=5&apiKey={api_key}"
+    url = f"https://newsapi.org/v2/everything?q={query}&language=en&from={one_month_str}&to={today_str}&sortBy=publishedAt&pageSize=5&apiKey={api_key}"
     
     try:
         response = requests.get(url)
@@ -115,6 +117,7 @@ if st.button("Predict"):
         entity_text="world"
     fetch_news(entity_text)
     highest_cosine=0
+    high_articles=[]
     with open("api_news/requests.json","r") as f:
         files=json.load(f)
         articles=files["articles"]
@@ -127,7 +130,9 @@ if st.button("Predict"):
             cosine_sim = cosine_similarity([embeddings[0]], [embeddings[1]])
             if(cosine_sim[0][0]>highest_cosine):
                highest_cosine=cosine_sim[0][0]
-
+            if(cosine_sim[0][0]>0.5):
+                high_articles.append(article )
+    
 
 
     input_text = stemming(title + " " + text)
@@ -153,14 +158,19 @@ if st.button("Predict"):
             st.markdown(f"### **❓ Prediction : {predict}**")
         else:
             st.markdown(f"### **❌ Prediction : {predict}**")
-            
-
-
-
-
         st.session_state.prediction_made = True  
+        st.write("### related articles")
+        for i in range(len(high_articles)):
+            html = f'''
+            <a href="{high_articles[i]["url"]}" target="_blank">
+                <img src="{high_articles[i]["urlToImage"]}" alt="" style="width:400px;">
+                <p >{high_articles[i]["title"]}</p>
+            </a>
+            '''
+            st.markdown(html, unsafe_allow_html=True)
     except Exception as e:
         st.error(f"Error in prediction: {e}")
+     
 
 
 if st.session_state.prediction_made:
