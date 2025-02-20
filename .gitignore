@@ -2,3 +2,5 @@ testing/
 News_dataset/
 .env
 myenv/
+fake_news.ipynb
+merging_model.ipynb
