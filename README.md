@@ -1,6 +1,7 @@
 ---
 
 ## Fake News Detection Model with SDG Classifier & Streamlit App
+[visit now](https://fakenewsbuster.streamlit.app/)
 
 This repository contains a **Fake News Detection Model** built using an **SDG (Stochastic Gradient Descent) classifier** for classifying news articles as either fake or real. The model is trained on a publicly available dataset of news articles and is capable of distinguishing between fake and true news based on their content.
 
