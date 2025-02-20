@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detector</title>
+    <script>
+        async function predictNews(event) {
+            event.preventDefault();
+            let title = document.getElementById("title").value;
+            let text = document.getElementById("text").value;
+            
+            let formData = new FormData();
+            formData.append("title", title);
+            formData.append("text", text);
+            
+            try {
+                let response = await fetch("/predict", {
+                    method: "POST",
+                    body: formData
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                
+                let result = await response.json();
+                document.getElementById("predictionResult").innerHTML = `<strong>Prediction:</strong> ${result.prediction}`;
+                
+                let articlesDiv = document.getElementById("relatedArticles");
+                articlesDiv.innerHTML = "<h3>Related Articles:</h3>";
+                
+                result.articles.forEach(article => {
+                    let articleHtml = `
+                        <a href="${article.url}" target="_blank">
+                            <img src="${article.urlToImage}" alt="Article Image" style="width: 100px; height: auto;">
+                            <p>${article.title}</p>
+                        </a>
+                        <hr>
+                    `;
+                    articlesDiv.innerHTML += articleHtml;
+                });
+                
+            } catch (error) {
+                console.error("Error:", error);
+                document.getElementById("predictionResult").innerHTML = `<strong>Error:</strong> ${error.message}`;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Fake News Detector</h2>
+    <form onsubmit="predictNews(event)">
+        <label for="title">News Title:</label><br>
+        <input type="text" id="title" name="title" required><br><br>
+        
+        <label for="text">News Content:</label><br>
+        <textarea id="text" name="text" required></textarea><br><br>
+        
+        <button type="submit">Predict</button>
+    </form>
+    
+    <div id="predictionResult"></div>
+    <div id="relatedArticles"></div>
+</body>
+</html>

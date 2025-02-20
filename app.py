@@ -1,4 +1,4 @@
-import streamlit as st
+from flask import Flask, render_template, request, jsonify
 import joblib
 import re
 import os
@@ -14,7 +14,9 @@ import spacy
 from sklearn.metrics.pairwise import cosine_similarity
 from dotenv import load_dotenv
 
+app = Flask(__name__)
 load_dotenv()
+
 try:
     stop_words = set(stopwords.words('english'))
 except LookupError:
@@ -24,173 +26,87 @@ except LookupError:
 ps = PorterStemmer()
 regex = re.compile('[^a-zA-Z]')
 
-@st.cache_resource
-def load_transformer_model():
-    return SentenceTransformer('paraphrase-MiniLM-L6-v2')
-
-@st.cache_resource
-def load_spacy_model():
-    return spacy.load("en_core_web_trf")
-
-model1 = load_transformer_model()
-nlp = load_spacy_model()
-
+model1 = SentenceTransformer('paraphrase-MiniLM-L6-v2')
+nlp = spacy.load("en_core_web_trf")
 
 try:
     model = joblib.load('model/fake_news_model.pkl')
     vectorizer = joblib.load('model/tfid_vectorizer.pkl')
 except FileNotFoundError:
-    st.error("Model or vectorizer file not found. Please check your file paths.")
-
-
-st.title("News Predictor")
-st.subheader("Enter News Title and Text")
-
-
-title = st.text_input("Title")
-text = st.text_area("Content")
+    print("Model or vectorizer file not found. Please check your file paths.")
 
 def stemming(content):
-    """Preprocess content by cleaning, lowering, and stemming"""
     stemmed_content = regex.sub(' ', content).lower()
     stemmed_content = stemmed_content.split()
     stemmed_content = [ps.stem(word) for word in stemmed_content if word not in stop_words]
     return ' '.join(stemmed_content)
 
 def fetch_news(query):
-    """Fetch news articles based on a query"""
-    today=datetime.today()
-    one_month = datetime.today() - relativedelta(months=1)
+    today = datetime.today()
+    one_month = today - relativedelta(months=1)
     one_month_str = one_month.strftime('%Y-%m-%d')
-    today_str=today.strftime('%Y-%m-%d')
-    api_key = os.getenv("NEWS_API_KEY")  # Replace with a safer environment variable in practice
+    today_str = today.strftime('%Y-%m-%d')
+    api_key = os.getenv("NEWS_API_KEY")
     url = f"https://newsapi.org/v2/everything?q={query}&language=en&from={one_month_str}&to={today_str}&sortBy=publishedAt&pageSize=5&apiKey={api_key}"
-    
     try:
         response = requests.get(url)
         response.raise_for_status()
-        data = response.json()
-
-        with open('api_news/requests.json', 'w') as json_file:
-            json.dump(data, json_file, indent=4)
-        st.write("Please wait for few moments...")
+        return response.json()
     except requests.exceptions.RequestException as e:
-        st.error(f"Error in API request: {e}")
+        return {"error": str(e)}
 
 def fetch_entity(text):
-   doc=nlp(text)
-   entity_set=set()
-   for entity in doc.ents:
-        essential_entities = [
-    "PERSON",
-    "FAC",
-    "GPE",
-    "LOC",
-    "NORP",
-    "EVENT",
-    "LAW",
-    "PRODUCT",
-    "WORK_OF_ART" ]
-
+    doc = nlp(text)
+    entity_set = set()
+    essential_entities = ["PERSON", "FAC", "GPE", "LOC", "NORP", "EVENT", "LAW", "PRODUCT", "WORK_OF_ART"]
+    for entity in doc.ents:
         if entity.label_ in essential_entities:
-           entity_set.add(entity.text)
-   entity_text=""
-   for entity in entity_set:
-       entity_text+=entity+" "
-   
-   return entity_text
+            entity_set.add(entity.text)
+    return " ".join(entity_set) if entity_set else "world"
 
+# ...existing code...
 
+@app.route('/predict', methods=['POST'])
+def predict():
+    title = request.form['title']
+    text = request.form['text']
+    entity_text = fetch_entity(title)
+    news_data = fetch_news(entity_text)
+    high_articles = []
+    highest_cosine = 0
 
-if "feedback_label" not in st.session_state:
-    st.session_state.feedback_label = None
-
-
-if "prediction_made" not in st.session_state:
-    st.session_state.prediction_made = False
-
-
-if st.button("Predict"):
-    
-    entity_text=fetch_entity(title)
-    if entity_text=="":
-        entity_text="world"
-    fetch_news(entity_text)
-    highest_cosine=0
-    high_articles=[]
-    with open("api_news/requests.json","r") as f:
-        files=json.load(f)
-        articles=files["articles"]
-        for article in articles:
-            title1 = article["title"] if article["title"] else ""
-            description1 = article["description"] if article["description"] else ""
+    if 'articles' in news_data:
+        for article in news_data['articles']:
+            title1 = article.get("title", "")
+            description1 = article.get("description", "")
             article1 = title1 + description1
-            article2=title+text
+            article2 = title + text
             embeddings = model1.encode([article1, article2])
-            cosine_sim = cosine_similarity([embeddings[0]], [embeddings[1]])
-            if(cosine_sim[0][0]>highest_cosine):
-               highest_cosine=cosine_sim[0][0]
-            if(cosine_sim[0][0]>0.5):
-                high_articles.append(article )
-    
-
+            cosine_sim = cosine_similarity([embeddings[0]], [embeddings[1]])[0][0]
+            highest_cosine = max(highest_cosine, cosine_sim)
+            if cosine_sim > 0.5:
+                high_articles.append(article)
 
     input_text = stemming(title + " " + text)
     input_text_tfidf = vectorizer.transform([input_text])
-    st.session_state.input_tfidf = input_text_tfidf
+    prediction = model.predict(input_text_tfidf)[0]
 
-    try:
-        prediction = model.predict(input_text_tfidf)
-        predict=""
-        if(prediction[0]==0 and highest_cosine>=0.3):
-           predict="Verified News"    
-        elif(prediction[0]==0 and highest_cosine<=0.1):
-            predict="Questionable"
-        elif(prediction[0]==1 and highest_cosine>=0.5):
-            predict="Likely True"
-        elif(prediction[0]==1 and highest_cosine>=0.2):
-            predict="Potentially Misleading"
-        else :
-            predict="Fake News"
-        if(predict=="Likely True" or predict=="Verified News"):
-            st.markdown(f"### **✅ Prediction : {predict}**")
-        elif (predict=="Questionable"):
-            st.markdown(f"### **❓ Prediction : {predict}**")
-        else:
-            st.markdown(f"### **❌ Prediction : {predict}**")
-        st.session_state.prediction_made = True  
-        st.write("### related articles")
-        for i in range(len(high_articles)):
-            html = f'''
-            <a href="{high_articles[i]["url"]}" target="_blank">
-                <img src="{high_articles[i]["urlToImage"]}" alt="" style="width:400px;">
-                <p >{high_articles[i]["title"]}</p>
-            </a>
-            '''
-            st.markdown(html, unsafe_allow_html=True)
-    except Exception as e:
-        st.error(f"Error in prediction: {e}")
-     
+    if prediction == 0 and highest_cosine >= 0.3:
+        predict = "Verified News"
+    elif prediction == 0 and highest_cosine <= 0.1:
+        predict = "Questionable"
+    elif prediction == 1 and highest_cosine >= 0.5:
+        predict = "Likely True"
+    elif prediction == 1 and highest_cosine >= 0.2:
+        predict = "Potentially Misleading"
+    else:
+        predict = "Fake News"
+    
+    return jsonify({"prediction": predict, "articles": high_articles})
 
+@app.route('/', methods=['GET'])
+def index():
+    return render_template('index.html')
 
-if st.session_state.prediction_made:
-    feedback_option = st.radio("Is this prediction correct? If not, select the correct label:",
-                               ("No, it's Real News", "No, it's Fake News"))
-    st.session_state.feedback_label = 0 if feedback_option == "No, it's Real News" else 1
-
-    if st.session_state.feedback_label is not None:
-        if st.button("Update Model with Feedback"):
-            if hasattr(model, "partial_fit"):
-                try:
-                    
-                    model.partial_fit(st.session_state.input_tfidf, [st.session_state.feedback_label], classes=[0, 1])
-                    joblib.dump(model, 'model/fake_news_model.pkl')
-                    joblib.dump(vectorizer, 'model/tfid_vectorizer.pkl')
-                    st.write("The model has been updated with your feedback.")
-                    st.session_state.prediction_made = False  
-                    st.session_state.feedback_label = None 
-                    st.session_state.input_tfidf=None
-                except Exception as e:
-                    st.error(f"Error updating model: {e}")
-            else:
-                st.warning("This model does not support online learning; it cannot be updated with new data.")
+if __name__ == '__main__':
+    app.run(debug=True)
