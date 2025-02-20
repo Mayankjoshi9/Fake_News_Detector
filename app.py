@@ -26,14 +26,22 @@ except LookupError:
 ps = PorterStemmer()
 regex = re.compile('[^a-zA-Z]')
 
-model1 = SentenceTransformer('paraphrase-MiniLM-L6-v2')
-nlp = spacy.load("en_core_web_trf")
+# Lazy load models
+model1 = None
+nlp = None
+model = None
+vectorizer = None
 
-try:
-    model = joblib.load('model/fake_news_model.pkl')
-    vectorizer = joblib.load('model/tfid_vectorizer.pkl')
-except FileNotFoundError:
-    print("Model or vectorizer file not found. Please check your file paths.")
+def load_models():
+    global model1, nlp, model, vectorizer
+    if model1 is None:
+        model1 = SentenceTransformer('paraphrase-MiniLM-L6-v2')
+    if nlp is None:
+        nlp = spacy.load("en_core_web_trf")
+    if model is None:
+        model = joblib.load('model/fake_news_model.pkl')
+    if vectorizer is None:
+        vectorizer = joblib.load('model/tfid_vectorizer.pkl')
 
 def stemming(content):
     stemmed_content = regex.sub(' ', content).lower()
@@ -56,6 +64,7 @@ def fetch_news(query):
         return {"error": str(e)}
 
 def fetch_entity(text):
+    load_models()
     doc = nlp(text)
     entity_set = set()
     essential_entities = ["PERSON", "FAC", "GPE", "LOC", "NORP", "EVENT", "LAW", "PRODUCT", "WORK_OF_ART"]
@@ -64,10 +73,9 @@ def fetch_entity(text):
             entity_set.add(entity.text)
     return " ".join(entity_set) if entity_set else "world"
 
-# ...existing code...
-
 @app.route('/predict', methods=['POST'])
 def predict():
+    load_models()
     title = request.form['title']
     text = request.form['text']
     entity_text = fetch_entity(title)
