@@ -1,71 +1,19 @@
 {
     "status": "ok",
-    "totalResults": 724,
+    "totalResults": 1,
     "articles": [
         {
             "source": {
-                "id": null,
-                "name": "Hurriyet Daily News"
+                "id": "the-times-of-india",
+                "name": "The Times of India"
             },
-            "author": "hurriyetdailynews.com",
-            "title": "T\u00fcrkiye rejects Trump\u2019s bid to expel Palestinians from Gaza",
-            "description": "T\u00fcrkiye has reiterated its objection to U.S. President Donald Trump\u2019s proposal to expel Palestinians from their lands to Egypt and Jordan, as Foreign Minister Hakan Fidan described the American leader's approach as \"failing to read history properly.\"",
-            "url": "https://www.hurriyetdailynews.com/turkiye-rejects-trumps-bid-to-expel-palestinians-from-gaza-205431",
-            "urlToImage": "https://image.hurimg.com/i/hurriyet/75/200x200/67a21336c60e420cca11d7ab.jpg",
-            "publishedAt": "2025-02-04T13:16:55Z",
-            "content": "ANKARA\r\nT\u00fcrkiye has reiterated its objection to U.S. President Donald Trumps proposal to expel Palestinians from their lands to Egypt and Jordan, as Foreign Minister Hakan Fidan described the America\u2026 [+2750 chars]"
-        },
-        {
-            "source": {
-                "id": "the-jerusalem-post",
-                "name": "The Jerusalem Post"
-            },
-            "author": "BY ARSHAD MEHMOOD/THE MEDIA LINE",
-            "title": "Pakistan denies involvement as Hamas negotiates hosting of Palestinian prisoners",
-            "description": "These reports come as negotiations for the agreement\u2019s second phase are set to begin on Tuesday and after Trump suggested that Arab nations should take in large numbers of Palestinian refugees.",
-            "url": "https://www.jpost.com/middle-east/article-840617",
-            "urlToImage": "https://images.jpost.com/image/upload/f_auto,fl_lossy/c_fill,g_faces:center,h_407,w_690/647149",
-            "publishedAt": "2025-02-04T12:49:31Z",
-            "content": "[Islamabad] - Hamas said on Monday that Pakistan has agreed to host 15 Palestinian prisoners who were released from Israeli custody under a recent ceasefire agreement. However, Pakistan\u2019s Interior Mi\u2026 [+2998 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Boston Herald"
-            },
-            "author": "Associated Press",
-            "title": "Trump and Netanyahu hold talks as US president warns \u2018no guarantees\u2019 fragile peace in Gaza will hold",
-            "description": "Trump is guarded about the long-term prospects for the truce between Israel and Hamas",
-            "url": "https://www.bostonherald.com/2025/02/04/trump-netanyahu-hold-talks/",
-            "urlToImage": "https://www.bostonherald.com/wp-content/uploads/2025/02/Trump_Netanyahu_41416.jpg?w=1024&h=682",
-            "publishedAt": "2025-02-04T12:42:25Z",
-            "content": "By AAMER MADHANI and TIA GOLDENBERG, Associated Press\r\nWASHINGTON (AP) \u2014 President Donald Trump and Benjamin Netanyahu are set to meet Tuesday as the Israeli prime minister faces competing pressure f\u2026 [+6862 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Washington Monthly"
-            },
-            "author": "Margaret Carlson",
-            "title": "In Trump\u2019s Washington, the Nomination \u201cSherpas\u201d Do the Heavy Lifting. Just ask Kennedy, Gabbard, and Hegseth",
-            "description": "They usually have the reputation and bipartisan cred that the nominees lack\nThe post In Trump\u2019s Washington, the Nomination \u201cSherpas\u201d Do the Heavy Lifting. Just ask Kennedy, Gabbard, and Hegseth appeared first on Washington Monthly.",
-            "url": "http://washingtonmonthly.com/2025/02/04/in-trumps-washington-the-nomination-sherpas-do-the-heavy-lifting-just-ask-kennedy-gabbard-and-hegseth/",
-            "urlToImage": "https://washingtonmonthly.com/wp-content/uploads/2025/02/AP25030735204553-scaled.jpg",
-            "publishedAt": "2025-02-04T12:24:08Z",
-            "content": "When Senator Lindsay Graham, a critic of Tulsi Gabbard, who is tied with Robert F. Kennedy Jr. for the most endangered nominee, learned that former North Carolina Senator Richard Burr would be shephe\u2026 [+8056 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Nakedcapitalism.com"
-            },
-            "author": "Yves Smith",
-            "title": "Links 2/4/2025",
-            "description": "Our fainting daily links: black star food-making, deadly Alzheimers meds, EU: climate change 'uninsurable, China tariff retaliation, Jo'burg econ weakness, France oligarch purge? Reform leads in UK, moar Israel ceasfire cheating, Trump Ukraine minerals for we\u2026",
-            "url": "https://www.nakedcapitalism.com/2025/02/links-2-4-2025.html",
-            "urlToImage": "https://www.nakedcapitalism.com/wp-content/uploads/2025/02/Screen-Shot-2025-02-04-at-4.07.21-PM.png",
-            "publishedAt": "2025-02-04T11:55:06Z",
-            "content": "Black holes seen \u2018cooking\u2019 their own food in fascinating discovery Earth\r\nThe #1 cause of maternal death in the US: suicide/homicide ZMEScience (Dr. Kevin)\r\nGuillain-Barre syndrome: India faces outbr\u2026 [+8553 chars]"
+            "author": "ET Online",
+            "title": "\"Mehul Choksi\u2019s wallet is full...\": PNB scam whistle-blower explains why extradition won\u2019t be easy",
+            "description": "Sources say Choksi was arrested in Belgium on Saturday after local authorities confirmed his presence in the country. Sources further stated that preparations were being made for his extradition to India.",
+            "url": "https://economictimes.indiatimes.com/news/india/mehul-choksis-wallet-is-full-pnb-scam-whistle-blower-explains-why-extradition-wont-be-easy/articleshow/120269651.cms",
+            "urlToImage": "https://img.etimg.com/thumb/msid-120269698,width-1200,height-630,imgsize-36836,overlay-economictimes/articleshow.jpg",
+            "publishedAt": "2025-04-14T04:22:39Z",
+            "content": "Fugitive businessman Mehul Choksi has reportedly been arrested in Belgium, but Punjab National Bank (PNB) scam whistle-blower Hariprasad SV believes that bringing him back to India will be very diffi\u2026 [+2346 chars]"
         }
     ]
 }
